@@ -1,4 +1,4 @@
-﻿body 
+body 
 {
   font-family: Arial;
 	background-image: linear-gradient(110deg, rgba(255,255,255,0.8), rgba(24, 76, 105,0.85)), url("https://scontent.fmnl8-3.fna.fbcdn.net/v/t1.15752-9/486266338_9732544736796285_1481978694265966669_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeG5DF2qEjdneisPegbR3XDcQrkiSejE95pCuSJJ6MT3mpUKm4SkwZkV-P2apHyNnnLympHs6Z7g4M38dh_WFujb&_nc_ohc=_DE_x-fjVCsQ7kNvgHJvTvt&_nc_oc=Adm7YouC_iZe7xlQa9Jy8mNgXi9xn5zBHdwl24ZVLqFlkqbPOg4AjYogw8ks0tfUkoY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl8-3.fna&oh=03_Q7cD1wH0sC8jDmmJAp6usDz6iT04knhu5Hu2ttWKLqVScHK5Mg&oe=680DF1BC");
@@ -33,8 +33,15 @@ transform: scale(1.05);
 }
 #banner
 {
-
-    background-image:url("https://scontent.fmnl8-3.fna.fbcdn.net/v/t1.15752-9/485354881_645021561567063_6561403483453404121_n.png?_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeFXKIIESCpiGeOhQHx3ePntT2_VSxeWY7hPb9VLF5ZjuNf84TLbVke6SRXBcpn02DtQLAZtpbklyZDpdJA-TiUW&_nc_ohc=PfpWm3dVIqsQ7kNvgGb_MTR&_nc_oc=Adln_Jb-tX6H8e09cmhPyAqeOjYmW6ZXLdw3hCm94alRvmvdCi9ag_XFPFaqCL-pvlQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fmnl8-3.fna&oh=03_Q7cD1wFuaGWKEPoePEWLCT9CN46OMU3lAxBg_nyo_iEbAbR1Wg&oe=680DEECC");
+    height: 150px;
+    width: 100%;
+    position: relative;
+}
+#banner img
+{
+ object-fit: cover;
+  width: inherit;
+  height: 100%;
 }
 
 #header
@@ -46,9 +53,8 @@ transform: scale(1.05);
     background: rgb(18, 38, 82);
     box-shadow:0px 5px 20px 5px #000000;
     margin-bottom:50px;
-    
-    
-    
+    height: 50px;
+    width: 100%;
 }
 
 #web
@@ -93,7 +99,29 @@ transform: scale(1.05);
     margin-bottom: 40px;
     
 }
-  
+.table-container { 
+			display: flex; 
+			flex-wrap: wrap; 
+			justify-content: center; 
+			margin: 20px; 
+		} 
+		.table { 
+			border-collapse: collapse; 
+			width: 100%; 
+			 
+			    border: 3px solid #173C69;
+			    border-radius:1px;
+    border-collapse: collapse;
+    width: 450px;
+    margin: 30px;
+    margin-bottom: -10px;
+    height: 200px;
+    background-color: #ffffff;
+    outline: #2E93C9 solid 10px;
+    box-shadow:0px 5px 40px 5px #ffffff;
+		} 
+
+tr:hover {background-color: #0857b2;}
  .btn
  {
      
@@ -107,6 +135,7 @@ transform: scale(1.05);
      vertical-align:top;
      transition:all 3s ease;
      transition-delay: 0.2s;
+     margin-bottom: 10px;
 
  }
  .btn:hover
@@ -116,16 +145,11 @@ transform: scale(1.05);
      border-radius: 100px;
      transform: translateY(-10px);
  } 
-
-.table
+.btn::after
 {
-    
-    border: 3px solid #173C69;
-    border-collapse: collapse;
-    width: 900px;
-    margin: 20px;
-    
+    content: " - Your appointment has been added.";
 }
+
 
 .grid
 {
@@ -135,12 +159,13 @@ transform: scale(1.05);
 }
 
 .footer
-{width: 100%;
- height: 50px;
+{
+ height: 40px;
+ width: 100%;
  display: inline-block;
   background-image: linear-gradient(to right, rgba(93, 224, 253,1), rgba(0, 74, 173,1));
   border: 1px solid white;
-  border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
   padding: 5px;
 }
 .footer a
